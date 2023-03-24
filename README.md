@@ -4,13 +4,15 @@
 # docker-pip-cache
 This image runs `devpi` server serving as a caching proxy to the main index.
 
+*Note:* This is a fix awaiting for this [PR](https://github.com/aanatoly/docker-pip-cache/pull/1) to be merged
+
 ## Usage
 Start the server
 ```bash
 docker run --rm -t --name pip-cache \
     -v /var/cache/pip-cache:/data \
     -p 3141:3141 \
-    aanatoly/pip-cache
+    almavizca/pip-cache
 ```
 Run pip
 ```bash
